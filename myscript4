@@ -1,0 +1,22 @@
+echo "Program Menu
+===================
+What would you like to do?
+V)iew the company policies and procedures
+P)rovide feedback to the Human Resources department
+L)earn the vi editor
+H)ear a duck quack
+Enter your choice = = > \c"
+read ANS
+case $ANS in
+v | V ) less /public/company_policies.txt
+;;
+p | P ) mail hr_admin
+;;
+l | L ) vimtutor
+;;
+h | H ) echo "Go to the park."
+;;
+* ) echo "You must select V, P, L or H!"
+exit 1
+;;
+esac
